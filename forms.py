@@ -17,46 +17,34 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 # ==================================================================================
 
 # URL del formulario de Google Forms
-GoogleURL = "https://docs.google.com/forms/d/e/1FAIpQLSfeF4YtDttz2clrFb3Rusa6sXGU4DfWEPzJcpXHeLa_BT3AEg"
+GoogleURL = "https://docs.google.com/forms/d/e/1FAIpQLScz966YBiBixLERH6fPwZx0C7R1JQab9cjMB9fEWizWR20Zjg"
 
 urlResponse = GoogleURL + "/formResponse"
 urlReferer = GoogleURL + "/viewForm"
 
+
 # IDs de las entradas encontradas en la consola después de enviar el formulario.
 form_data = {
-    'entry.753621689': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],   # 4. Casi Siempre
-    'entry.425425378': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],   # 4. Casi Siempre
-    'entry.960741044': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],   # 4. Casi Siempre
-    'entry.1367523984': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],  # 3. A Veces
-    'entry.98974128': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],    # 2. Casi Nunca
-    'entry.691319681': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],    # 2. Casi Nunca
-    'entry.475947805': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],   # 2. Casi Nunca
-    'entry.608321832': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],   # 3. A Veces
-    'entry.1052439477': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],  # 2. Casi Nunca
-    'entry.331239872': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],   # 2. Casi Nunca
-    'entry.1678953737': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],  # 3. A Veces
-    'entry.218449170': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],   # 4. Casi Siempre
-    'entry.1923756445': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],  # 3. A Veces
-    'entry.443068663': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],   # 3. A Veces
-    'entry.1720614532': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],  # 3. A Veces
-    'entry.1172391505': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],  # 3. A Veces
-    'entry.172492878': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],   # 4. Casi Siempre
-    'entry.924726708': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],   # 4. Casi Siempre
-    'entry.733229067': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],   # 4. Casi Siempre
-    'entry.1436234044': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],  # 3. A Veces
-    'entry.1188828452': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],  # 4. Casi Siempre
-    'entry.609794076': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],   # 3. A Veces
-    'entry.1054996394': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],  # 3. A Veces
-    'entry.622165299': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],   # 2. Casi Nunca
-    'entry.690602917': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],   # 4. Casi Siempre
-    'entry.1760425858': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],  # 4. Casi Siempre
-    'entry.1594747963': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],  # 3. A Veces
-    'entry.1947112039': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],  # 4. Casi Siempre
-    'entry.749220870': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],   # 3. A Veces
-    'entry.1239973735': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],  # 2. Casi Nunca
-    'entry.1328910268': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],  # 4. Casi Siempre
-    'entry.879348836': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre'],   # 4. Casi Siempre
-    'entry.565038232': ['1. Nunca', '2. Casi Nunca', '3. A Veces', '4. Casi Siempre', '5. Siempre']    # 3. A Veces
+    'entry.192444546': ['Nunca', 'Casi nunca', 'A veces', 'Casi siempre', 'Siempre'],
+    'entry.1094732297': ['Nunca', 'Casi nunca', 'A veces', 'Casi siempre', 'Siempre'],
+    'entry.2127124563': ['Nunca', 'Casi nunca', 'A veces', 'Casi siempre', 'Siempre'],
+    'entry.1504179541': ['Nunca', 'Casi nunca', 'A veces', 'Casi siempre', 'Siempre'],
+    'entry.412759122': ['Nunca', 'Casi nunca', 'A veces', 'Casi siempre', 'Siempre'],
+    'entry.1160674523': ['Nunca', 'Casi nunca', 'A veces', 'Casi siempre', 'Siempre'],
+    'entry.1615303137': ['Nunca', 'Casi nunca', 'A veces', 'Casi siempre', 'Siempre'],
+    'entry.881648527': ['Nunca', 'Casi nunca', 'A veces', 'Casi siempre', 'Siempre'],
+    'entry.621481633': ['Nunca', 'Casi nunca', 'A veces', 'Casi siempre', 'Siempre'],
+    'entry.1070856573': ['Nunca', 'Casi nunca', 'A veces', 'Casi siempre', 'Siempre'],
+    'entry.891880330': ['Nunca', 'Casi nunca', 'A veces', 'Casi siempre', 'Siempre'],
+    'entry.602056079': ['Nunca', 'Casi nunca', 'A veces', 'Casi siempre', 'Siempre'],
+    'entry.1310074750': ['Nunca', 'Casi nunca', 'A veces', 'Casi siempre', 'Siempre'],
+    'entry.1071564040': ['Nunca', 'Casi nunca', 'A veces', 'Casi siempre', 'Siempre'],
+    'entry.1323530264': ['Nunca', 'Casi nunca', 'A veces', 'Casi siempre', 'Siempre'],
+    'entry.1306273844': ['Nunca', 'Casi nunca', 'A veces', 'Casi siempre', 'Siempre'],
+    'entry.1393179684': ['Nunca', 'Casi nunca', 'A veces', 'Casi siempre', 'Siempre'],
+    'entry.1398139528': ['Nunca', 'Casi nunca', 'A veces', 'Casi siempre', 'Siempre'],
+    'entry.1342420244': ['Nunca', 'Casi nunca', 'A veces', 'Casi siempre', 'Siempre'],
+    'entry.285913729': ['Nunca', 'Casi nunca', 'A veces', 'Casi siempre', 'Siempre']
 }
 
 
@@ -69,51 +57,36 @@ session.mount('https://', adapter)
 
 # Número de hilos que quieres ejecutar (No uses demasiados hilos)
 num_threads = 10
-chunks_per_thread = 25
+chunks_per_thread = 30
 
 threads = []
 count_lock = threading.Lock()
 count = 0
-max_responses = 10
+max_responses = 171
 
-# Pesos personalizados para cada entry
+
 custom_weights = {
-    'entry.753621689': [0.0629, 0.1954, 0.2616, 0.3609, 0.1192],  #1
-    'entry.425425378': [0.0629, 0.1954, 0.2616, 0.3609, 0.1192],  #2
-    'entry.960741044': [0.0629, 0.1954, 0.2616, 0.3609, 0.1192],  #3
-    'entry.1367523984': [0.1060, 0.2185, 0.2980, 0.2815, 0.0960], #4
-    'entry.98974128': [0.1159, 0.3046, 0.3079, 0.1854, 0.0861],   #5
-    'entry.691319681': [0.0629, 0.1954, 0.2616, 0.3609, 0.1192],  #6
-    'entry.475947805': [0.0993, 0.1821, 0.3245, 0.2914, 0.1026],  #7
-    'entry.608321832': [0.0629, 0.1954, 0.2616, 0.3609, 0.1192], #8
-    'entry.1052439477': [0.0629, 0.1954, 0.2616, 0.3609, 0.1192], #9
-    'entry.331239872': [0.0629, 0.1954, 0.2616, 0.3609, 0.1192], #10
-    'entry.1678953737': [0.1225, 0.2252, 0.2815, 0.2483, 0.1225], #11
-    'entry.218449170': [0.1126, 0.1788, 0.3377, 0.2881, 0.0828],  #12
-    'entry.1923756445': [0.0993, 0.1821, 0.3245, 0.2914, 0.1026], #13
-    'entry.443068663': [0.1225, 0.2252, 0.2815, 0.2483, 0.1225],  #14
-    'entry.1720614532': [0.1126, 0.1722, 0.2715, 0.3179, 0.1358], #15
-    'entry.1172391505': [0.1126, 0.1788, 0.3377, 0.2881, 0.0828], #16
-    'entry.172492878': [0.1126, 0.1788, 0.3377, 0.2881, 0.0828], #17
-    'entry.924726708': [0.0629, 0.1954, 0.2616, 0.3609, 0.1192],  #18
-    'entry.733229067': [0.0629, 0.1954, 0.2616, 0.3609, 0.1192],  #19
-    'entry.1436234044': [0.0993, 0.1821, 0.3245, 0.2914, 0.1026], #20
-    'entry.1188828452': [0.0629, 0.1954, 0.2616, 0.3609, 0.1192], #21
-    'entry.609794076': [0.0629, 0.1954, 0.2616, 0.3609, 0.1192], #22
-    'entry.1054996394': [0.0629, 0.1954, 0.2616, 0.3609, 0.1192], #23
-    'entry.622165299': [0.1225, 0.2252, 0.2815, 0.2483, 0.1225],  #24
-    #==========================2DA VARIABLE====================
-    'entry.690602917': [0.0629, 0.1954, 0.2616, 0.3609, 0.1192],  #25
-    'entry.1760425858': [0.0629, 0.1954, 0.2616, 0.3609, 0.1192], #26
-    'entry.1594747963': [0.0993, 0.1821, 0.3245, 0.2914, 0.1026], #27
-    'entry.1947112039': [0.0629, 0.1954, 0.2616, 0.3609, 0.1192], #28
-    'entry.749220870': [0.0629, 0.1954, 0.2616, 0.3609, 0.1192],  #29
-    'entry.1239973735': [0.0993, 0.1821, 0.3245, 0.2914, 0.1026], #30
-    'entry.1328910268': [0.0629, 0.1954, 0.2616, 0.3609, 0.1192], #31
-    'entry.879348836': [0.0629, 0.1954, 0.2616, 0.3609, 0.1192], #32
-    'entry.565038232': [0.1225, 0.2252, 0.2815, 0.2483, 0.1225] #33
+    'entry.192444546': [0.05, 0.1, 0.2, 0.3, 0.35],  # A veces
+    'entry.1094732297': [0.05, 0.1, 0.2, 0.3, 0.35],  # Siempre
+    'entry.2127124563': [0.05, 0.1, 0.2, 0.3, 0.35],  # Siempre
+    'entry.1504179541': [0.05, 0.1, 0.2, 0.3, 0.35],  # A veces
+    'entry.412759122': [0.05, 0.1, 0.2, 0.3, 0.35],  # Casi siempre
+    'entry.1160674523': [0.05, 0.1, 0.2, 0.3, 0.35],  # Casi siempre
+    'entry.1615303137': [0.05, 0.15, 0.25, 0.3, 0.25],  # Siempre
+    'entry.881648527': [0.1, 0.1, 0.2, 0.25, 0.35],  # Casi nunca
+    'entry.621481633': [0.1, 0.1, 0.2, 0.25, 0.35],  # Casi nunca
+    'entry.1070856573': [0.05, 0.1, 0.15, 0.3, 0.4],  # Casi siempre
+    'entry.891880330': [0.05, 0.15, 0.2, 0.25, 0.35],  # A veces
+    'entry.602056079': [0.1, 0.1, 0.2, 0.3, 0.3],  # Siempre
+    'entry.1310074750': [0.1, 0.15, 0.2, 0.25, 0.3],  # Siempre
+    'entry.1071564040': [0.05, 0.15, 0.2, 0.25, 0.35],  # Casi nunca
+    'entry.1323530264': [0.05, 0.1, 0.2, 0.25, 0.4],  # Casi siempre
+    'entry.1306273844': [0.05, 0.1, 0.15, 0.25, 0.45],  # A veces
+    'entry.1393179684': [0.05, 0.1, 0.2, 0.25, 0.4],  # A veces
+    'entry.1398139528': [0.1, 0.15, 0.2, 0.25, 0.3],  # Casi nunca
+    'entry.1342420244': [0.1, 0.15, 0.2, 0.25, 0.3],  # Casi siempre
+    'entry.285913729': [0.05, 0.1, 0.15, 0.3, 0.4]   # Siempre
 }
-
 
 def submit_form(chunks_per_thread):
     global count
